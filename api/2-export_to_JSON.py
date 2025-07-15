@@ -5,7 +5,6 @@ import csv
 import json
 import requests
 import sys
-
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1].isdigit():
         api_endpoint = "https://jsonplaceholder.typicode.com"
@@ -23,4 +22,3 @@ if __name__ == "__main__":
                               'username': username})
             data = {"{}".format(user_id): tasks}
             json.dump(data, json_file)
-            
